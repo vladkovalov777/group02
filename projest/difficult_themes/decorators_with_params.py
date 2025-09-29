@@ -27,3 +27,5 @@ def get_text() -> str:
 print(divide(10, 3))
 print(multiply(2.3456, 7.8912))
 print(get_text())
+
+a=1
