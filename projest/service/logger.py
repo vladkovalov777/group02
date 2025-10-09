@@ -2,8 +2,8 @@ from logtail import LogtailHandler
 import logging
 import sys
 
-SOURCE_TOKEN = 'RNfEsvTJQ5dZRADj3y5fphog'
-HOST = "s1516021.eu-nbg-2.betterstackdata.com"
+SOURCE_TOKEN = 'HYN9JcsRs7e4KAFL4ms7XitL'
+HOST = "s1516027.eu-nbg-2.betterstackdata.com"
 
 
 def get_logger():
