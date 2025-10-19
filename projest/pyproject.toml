@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "logtail-python>=0.3.4",
+    "psycopg2-binary>=2.9.11",
     "python-dotenv>=1.1.1",
     "redis>=6.4.0",
 ]
