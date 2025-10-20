@@ -1,27 +1,27 @@
-from revision.functions_utils import is_number_bigger_than_given, add_salt_to_list, say_hellow_buddy, \
-    return_biggest_num_from_array, multiply_two_nums
+from revision.functions_utils import greet_person, \
+    is_even, reverse_string, calculate_average, add_person_to_list, count_vowels, fahrenheit_to_celsius
 
 
 def main():
-    result = is_number_bigger_than_given(candidate_number=5)
-    print(result)
-    result = is_number_bigger_than_given(candidate_number=66, threshold=1)
-    print(result)
+    print(greet_person())
+    print(greet_person("Alex"))
 
+    print(is_even(10))
+    print(is_even(7))
 
-    given_list = []
-    add_salt_to_list(given_list)
-    add_salt_to_list(given_list)
-    add_salt_to_list(given_list)
-    add_salt_to_list(given_list)
-    add_salt_to_list(given_list)
-    print(given_list)
-    print(say_hellow_buddy())
-    arr_1 = [1, 2, 3, 4, 5, 6, 20]
-    print(return_biggest_num_from_array(arr_1))
-    num_one = 4
-    num_two = 6
-    print(multiply_two_nums(num_one, num_two))
+    print(reverse_string("Python"))
+
+    numbers = [10.5, 20.0, 30.5]
+    print(calculate_average(numbers))
+
+    people = ["Alice", "Bob"]
+    new_people = add_person_to_list(people, "Charlie")
+    print("Original list:", people)
+    print("New list:", new_people)
+
+    print(count_vowels("Hello World"))
+
+    print(fahrenheit_to_celsius(100))
 
 
 if __name__ == "__main__":

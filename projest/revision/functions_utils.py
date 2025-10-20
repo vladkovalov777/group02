@@ -13,23 +13,34 @@ def add_salt_to_list(given_list: list) -> None:
     given_list.append(identifier)
 
 
-def  say_hellow_buddy():
-    return "Hellow, buddy"
+def greet_person(name: str = "Guest") -> str:
+    return f"Hello, {name}!"
 
-def return_biggest_num_from_array(arr):
-    biggest_num = arr[0]
 
-    for elem in arr:
-        if elem > biggest_num:
-            biggest_num = elem
-    logger.info(f"return_biggest_num_from_array:{arr=}")
-    return biggest_num
-arr_1 = [1,2,3,4,5,6]
-a = return_biggest_num_from_array(arr_1)
-print(a)
+def is_even(number: int) -> bool:
+    return number % 2 == 0
 
-def multiply_two_nums(one,two):
-    return one*two
-b = multiply_two_nums(one=3, two=5)
 
-print(b)
+def reverse_string(text: str) -> str:
+    return text[::-1]
+
+
+def calculate_average(numbers: list[float]) -> float:
+    if not numbers:
+        return 0.0
+    return sum(numbers) / len(numbers)
+
+
+def add_person_to_list(people: list[str], person: str) -> list[str]:
+    new_list = people.copy()
+    new_list.append(person)
+    return new_list
+
+
+def count_vowels(text: str) -> int:
+    vowels = "aeiouyAEIOUY"  # English vowels only
+    return sum(1 for char in text if char in vowels)
+
+
+def fahrenheit_to_celsius(f: float) -> float:
+    return (f - 32) * 5 / 9
