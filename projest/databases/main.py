@@ -1,6 +1,8 @@
 import config
 import psycopg2
 
+from redis_service.base import result
+
 with psycopg2.connect(
         dbname=config.PGDATABASE,
         user=config.PGUSER,
@@ -43,5 +45,8 @@ with psycopg2.connect(
         port=5432,
 ) as connection:
     with connection.cursor() as cursor:
+        #query_insert = 'INSERT INTO brand (name) VALUES (%s)'
+        #cursor.execute(query_insert, ("BMW", ))
         query_insert = 'INSERT INTO brand (name) VALUES (%s)'
-        cursor.execute(query_insert, ("BMW", ))
+        cursor.execute(query_insert, ("tesla",))
+        print()
